@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+    <script src="/static/stylesheets/script.js"></script>
+
+</head>
+<body>
+<br>
+<h1 style="font-size: 30px; color: #fff;"><u> Financial Activity of Agricultural land </u></h1>
+<div class="login-box">
+    <img src="/static/public/loginPage_avatar.png" class="avatar">
+    <h1>Login</h1>
+    <form id="loginForm" method="post">{% csrf_token %}
+        <p>Username</p>
+        <input type="text" name="username" placeholder="Enter Username">
+        <p>Password</p>
+        <input type="password" name="password" placeholder="Enter Password">
+        <button onclick="window.location.href='dashboard_middleman';" class="btn" type="submit">Login</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/static/stylesheets/global.css" />
+    <link rel="stylesheet" href="/static/stylesheets/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Saira Condensed:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-1">
+      <img
+        class="desktop-1-child"
+        alt=""
+        src="/static/public/rectangle-1@2x.png"
+        data-animate-on-scroll
+      /><img
+        class="desktop-1-item"
+        alt=""
+        src="/static/public/rectangle-2@2x.png"
+      /><img
+        class="desktop-1-inner"
+        alt=""
+        src="/static/public/rectangle-3@2x.png"
+      /><img class="rectangle-icon" alt="" src="/static/public/rectangle-5@2x.png" />
+      <div class="rectangle-div"></div>
+      <img class="desktop-1-child1" alt="" src="/static/public/rectangle-8@2x.png" />
+      <div class="desktop-1-child2"></div>
+      <img
+        class="desktop-1-child3"
+        alt=""
+        src="/static/public/rectangle-7@2x.png"
+        data-animate-on-scroll
+      />
+      <div class="desktop-1-child4"></div>
+      <b class="financial-activity-of-container"
+        ><p class="financial-activity"><span>Financial Activity </span></p>
+        <p class="of-agricultural-land">
+          <span>of </span
+          ><span class="agricultural-land">agricultural land</span>
+        </p></b
+      >
+      <h1 class="financial-activity-of-container1" id="main heading">
+        <p class="financial-activity"><span>Financial Activity </span></p>
+        <p class="of-agricultural-land">
+          <span>of </span
+          ><span class="agricultural-land">agricultural land</span>
+        </p>
+      </h1>
+      <h2 class="anything" id="hd2">anything...</h2>
+      <p class="lorem-ipsum-dolor-container">
+        <span class="lorem-ipsum-dolor"
+          >We are providing you an online facility of record keeping of all the financial activities of agricultural land
+          where all calculations are done automatically and record is saved with date.</span
+        ><span class="lorem-ipsum-dolor">&nbsp;</span
+        ><span class="lorem-ipsum-dolor">
+          There will be three users who will use the software Owner, Middleman, and Partner who will login to their 
+          accounts and can make requests which will be sent to the respective person.</span
+        >
+      </p>
+      <button class="rectangle-button"></button>
+      <div class="desktop-1-child5"></div>
+      <h2 class="contact-us" id="hd23">contact us</h2>
+      <img class="vector-icon" alt="" src="/static/public/vector.svg" /><img
+        class="svg5-1-icon"
+        alt=""
+        src="/static/public/svg5-1.svg"
+      /><img class="svg4-2-icon" alt="" src="/static/public/svg4-2.svg" /><button
+        class="frame-2-button"
+        autofocus
+      >
+      <button onclick="window.location.href='main';" class="frame-3-button" ><b class="owner">owner</b></button
+      ><button onclick="window.location.href='main3';" class="frame-4-button"><b class="owner">middleman</b></button
+      ><button onclick="window.location.href='partner_first';" class="frame-5-partner-button">
+        <b class="owner">partner</b></button>
+      <img class="svg78-1-icon" alt="" src="/static/public/svg78-1.svg" />
+      <p class="lorem-ipsum-dolor1">Agricultural Land</p>
+      <p class="lorem-ipsum-dolor2">Agricultural Land</p>
+      <p class="lorem-ipsum-dolor3">+92 3310340632</p>
+      <p class="lorem-ipsum-dolor4">+92 3310340632</p>
+    </div>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,337 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shadow-pop-tr {
+  0% {
+    box-shadow: 0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+      0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+      0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+      0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18);
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    box-shadow: 1px -1px rgba(62, 62, 62, 0.18), 2px -2px rgba(62, 62, 62, 0.18),
+      3px -3px rgba(62, 62, 62, 0.18), 4px -4px rgba(62, 62, 62, 0.18),
+      5px -5px rgba(62, 62, 62, 0.18), 6px -6px rgba(62, 62, 62, 0.18),
+      7px -7px rgba(62, 62, 62, 0.18), 8px -8px rgba(62, 62, 62, 0.18);
+    transform: translateX(-8px) translateY(8px);
+  }
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+.desktop-1-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1460px;
+  height: 504px;
+  object-fit: cover;
+  opacity: 0;
+}
+.desktop-1-child.animate {
+  animation: 0s ease 0s 1 normal forwards fade-in;
+}
+.desktop-1-inner,
+.desktop-1-item {
+  position: absolute;
+  top: 1350px;
+  left: 0;
+  width: 1440px;
+  height: 356px;
+  object-fit: cover;
+}
+.desktop-1-inner {
+  top: 742px;
+  left: 160px;
+  width: 550px;
+  height: 423px;
+}
+.rectangle-div,
+.rectangle-icon {
+  position: absolute;
+  left: 615px;
+  width: 210px;
+  height: 124px;
+}
+.rectangle-icon {
+  top: 380px;
+  object-fit: cover;
+}
+.rectangle-div {
+  top: 504px;
+  background-color: var(--color-beige);
+}
+.desktop-1-child1,
+.desktop-1-child2 {
+  position: absolute;
+  left: 880px;
+  width: 210px;
+  height: 124px;
+}
+.desktop-1-child1 {
+  top: 380px;
+  object-fit: cover;
+}
+.desktop-1-child2 {
+  top: 504px;
+  background-color: var(--color-beige);
+}
+.desktop-1-child3,
+.desktop-1-child4 {
+  position: absolute;
+  left: 350px;
+  width: 210px;
+  height: 124px;
+}
+.desktop-1-child3 {
+  top: 380px;
+  object-fit: cover;
+}
+
+.desktop-1-child4 {
+  top: 504px;
+  background-color: var(--color-beige);
+}
+.financial-activity {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.agricultural-land {
+  color: var(--color-red-100);
+}
+.of-agricultural-land {
+  margin: 0;
+}
+.financial-activity-of-container {
+  position: absolute;
+  top: 134px;
+  left: 160px;
+  font-size: var(--font-size-xl);
+  line-height: 90px;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 725px;
+  color: var(--color-white);
+}
+.anything,
+.financial-activity-of-container1,
+.terms-and-conditions {
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  width: 725px;
+}
+.financial-activity-of-container1 {
+  margin: 0;
+  top: 134px;
+  left: 160px;
+  font-size: var(--font-size-xl);
+  line-height: 90px;
+  font-family: inherit;
+  color: var(--color-white);
+}
+.anything,
+.terms-and-conditions {
+  line-height: 40px;
+}
+.anything {
+  margin: 0;
+  top: 765px;
+  left: 825px;
+  font-size: 45px;
+  font-family: inherit;
+}
+.terms-and-conditions {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 1651px;
+  left: 1205px;
+  font-size: 25px;
+  font-family: var(--font-saira-condensed);
+  color: var(--color-black);
+  text-align: left;
+}
+.lorem-ipsum-dolor {
+  display: block;
+}
+.lorem-ipsum-dolor-container {
+  margin: 0;
+  position: absolute;
+  top: 842px;
+  left: 825px;
+  line-height: 30px;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 452px;
+}
+.rectangle-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: red;
+  position: absolute;
+  top: 765px;
+  left: 814px;
+  width: 5px;
+  height: 45px;
+}
+.frame-2-button:hover,
+.frame-3-button:hover,
+.frame-4-button:hover,
+.frame-5-partner-button:hover,
+.lorem-ipsum-dolor1:hover,
+.lorem-ipsum-dolor2:hover,
+.lorem-ipsum-dolor3:hover,
+.lorem-ipsum-dolor4:hover,
+.rectangle-button:hover {
+  animation: 1s ease 0s infinite normal none shadow-pop-tr;
+  opacity: 1;
+}
+.desktop-1-child5 {
+  position: absolute;
+  top: 1384px;
+  left: 160px;
+  background-color: rgba(217, 217, 217, 0.51);
+  width: 360px;
+  height: 322px;
+}
+.contact-us {
+  margin: 0;
+  position: absolute;
+  top: 1404px;
+  left: 175px;
+  font-size: 60px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  width: 725px;
+}
+.vector-icon {
+  position: absolute;
+  height: 1.76%;
+  width: 2.08%;
+  top: 87.69%;
+  right: 85.76%;
+  bottom: 10.55%;
+  left: 12.15%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.svg4-2-icon,
+.svg5-1-icon {
+  position: absolute;
+  top: 1539px;
+  left: 175px;
+  width: 50px;
+  height: 49px;
+  overflow: hidden;
+}
+.svg4-2-icon {
+  top: 1601px;
+  width: 37px;
+  height: 37px;
+}
+
+
+.frame-2-button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-sm) var(--padding-md);
+  background-color: var(--color-red-100);
+  position: absolute;
+  top: 13px;
+  left: 1280px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.owner {
+  position: relative;
+  font-size: var(--font-size-lg);
+  line-height: 40px;
+  text-transform: uppercase;
+  font-family: var(--font-saira-condensed);
+  color: var(--color-white);
+  text-align: left;
+}
+.frame-3-button,
+.frame-4-button,
+.frame-5-partner-button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-sm) var(--padding-md);
+  background-color: var(--color-red-100);
+  position: absolute;
+  top: 546px;
+  left: 390px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-4-button,
+.frame-5-partner-button {
+  left: 621px;
+}
+.frame-5-partner-button {
+  left: 908px;
+}
+.svg78-1-icon {
+  position: absolute;
+  top: 1653px;
+  left: 177px;
+  width: 33px;
+  height: 38px;
+  overflow: hidden;
+}
+.lorem-ipsum-dolor1,
+.lorem-ipsum-dolor2,
+.lorem-ipsum-dolor3,
+.lorem-ipsum-dolor4 {
+  margin: 0;
+  position: absolute;
+  top: 1496px;
+  left: 210px;
+  line-height: 30px;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 301px;
+}
+.lorem-ipsum-dolor2,
+.lorem-ipsum-dolor3,
+.lorem-ipsum-dolor4 {
+  top: 1549px;
+}
+.lorem-ipsum-dolor3,
+.lorem-ipsum-dolor4 {
+  top: 1605px;
+  left: 212px;
+}
+.lorem-ipsum-dolor4 {
+  top: 1656px;
+}
+.desktop-1 {
+  position: relative;
+  background-color: #ffeea6;
+  width: 100%;
+  height: 1706px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  font-family: var(--font-saira-condensed);
+}

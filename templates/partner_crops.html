@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <script>
+      //JavaScript function to add a new row to the transaction table when the user clicks on the "Request for Machinery" button
+      function addRequest() {
+        //Get the current date
+        var date = new Date();
+        var dateString = date.toLocaleDateString()
+    //Get the name of the user
+    var name = document.getElementById("name").value;
+
+    //Get the machinery request
+    var machinery = document.getElementById("machinery").value;
+
+    //Create a new row in the transaction table
+    var newRow = document.createElement("tr");
+
+    //Create the cells for the new row
+    var dateCell = document.createElement("td");
+    var nameCell = document.createElement("td");
+    var machineryCell = document.createElement("td");
+    var statusCell = document.createElement("td");
+
+    //Populate the cells with the data
+    dateCell.innerHTML = dateString;
+    nameCell.innerHTML = name;
+    machineryCell.innerHTML = machinery;
+    statusCell.innerHTML = "Pending";
+
+    //Add the cells to the new row
+    newRow.appendChild(dateCell);
+    newRow.appendChild(nameCell);
+    newRow.appendChild(machineryCell);
+    newRow.appendChild(statusCell);
+
+    //Add the new row to the transaction table
+    var table = document.getElementById("transaction-table");
+    table.appendChild(newRow);
+  }
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.sidebar{
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  transition: all .5s ease;
+}
+.sidebar header{
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.sidebar a{
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+}
+a.active,a:hover{
+  border-left: 5px solid #b93632;
+  color: #b93632;
+}
+.sidebar a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+}
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,#btn,#cancel{
+    display: none;
+  }
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+  
+  /*Styling for the heading*/
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  
+  /*Styling for the button*/
+  .request-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 10px;
+  }
+  
+  /*Styling for the records heading*/
+  .records-heading {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  
+  /*Styling for the transaction table*/
+  table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  th,td {
+border: 1px solid black;
+padding: 10px;
+font-size: 20px;
+}
+th {
+    background-color: lightgray;
+  }
+
+td {
+    background-color: white;
+}
+  
+  /*Styling for the form inputs*/
+  input[type="text"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 18px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+  }
+
+.b{
+    align-items: center;
+}
+
+</style>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="dashboard_partner.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+
+
+  <body style="background-image: url(/static/public/loginPage_b2.jpg);">
+    <span><h1>Partner Dashboard - Crops</h1></span>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>Partner</header>
+      <a href="dashboard_partner">
+        <i class="fas fa-angle-right"></i>
+        <span>Machinery</span>
+      </a>
+      <a href="partner_seeds">
+        <i class="fas fa-angle-right"></i>
+        <span>Seeds</span>
+      </a>
+      <a href="partner_crops">
+        <i class="fas fa-angle-right"></i>
+        <span>Crops</span> </a>
+    </div>
+    <br><br><br><br><br><br>
+    <div align="center">
+    <form method="post">{% csrf_token %}
+        <input class="b" type="text" name='name' id="name" placeholder="Enter your name">
+        <input class="b" type="text" name='crops' id="crops"
+               placeholder="Enter the crop harvested">
+        <input class="b" type="text" name='amt_bags' id="amt_bags"
+               placeholder="Enter the amount of crops">
+        <br>
+        <button class="btn btn-success" type="submit">Submit Crops</button>
+    </form>
+</div>
+<h2 class="records-heading">Records</h2>
+<table id="transaction-table">
+    <tr align="center">
+        <th>Date<br>
+            <br>
+            <ul>
+                {% for date in date %}
+                <p>{{ date }}</p>
+                {% endfor %}
+            </ul>
+        </th>
+
+        <th>Name<br>
+            <br>
+            <ul>
+                {% for name in partner_name %}
+                <p>{{ name }}</p>
+                {% endfor %}
+            </ul>
+        </th>
+        <th>Crops Harvested<br>
+            <br>
+            <ul>
+                {% for crops in crop_req %}
+                <p>{{ crops }}</p>
+                {% endfor %}
+            </ul>
+        </th>
+        <th>Amount (In bags)<br>
+            <br>
+            <ul>
+                {% for amt in amt_bags %}
+                <p>{{ amt }}</p>
+                {% endfor %}
+            </ul>
+        </th>
+    </tr>
+</table>
+   </body>
+</html>

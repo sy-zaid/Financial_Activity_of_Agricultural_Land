@@ -1,0 +1,19 @@
+:root {
+  /* fonts */
+  --font-saira-condensed: "Saira Condensed";
+
+  /* font sizes */
+  --font-size-base: 20px;
+  --font-size-lg: 37px;
+  --font-size-xl: 70px;
+
+  /* Colors */
+  --color-black: #000;
+  --color-red-100: #ed4f1e;
+  --color-white: #fff;
+  --color-beige: #f9f1ce;
+
+  /* Paddings */
+  --padding-sm: 2px;
+  --padding-md: 16px;
+}

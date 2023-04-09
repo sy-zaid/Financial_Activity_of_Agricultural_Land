@@ -1,0 +1,10 @@
+:root {
+  /* fonts */
+  --font-saira-condensed: "Saira Condensed";
+
+  /* font sizes */
+  --font-size-base: 75px;
+
+  /* Colors */
+  --color-white: #fff;
+}

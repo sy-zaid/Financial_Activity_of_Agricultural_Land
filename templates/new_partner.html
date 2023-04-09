@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/stylesheets/new_partner.css">
+    <script src="/static/stylesheets/script.js"></script>
+
+</head>
+<body>
+<br>
+<h1 style="font-size: 30px; color: #fff;"><u> Application for New Partner </u></h1>
+<div class="login-box">
+    <img src="/static/public/loginPage_avatar.png" class="avatar">
+    <h1>Register</h1>
+    <form id="signupform" method="post" action="">{% csrf_token %}
+        <p>{{signup.username.label}}</p>
+        <div>
+            {{signup.username}}
+        </div>
+        <p>{{signup.email.label}}</p>
+        <div>
+            {{signup.email}}
+        </div>
+        <p>{{signup.phone.label}}</p>
+        <div>
+            {{signup.phone}}
+        </div>
+        <p>{{signup.password1.label}}</p>
+        <div>
+            {{signup.password1}}
+        </div>
+        <p>{{signup.password2.label}}</p>
+        <div>
+            {{signup.password2}}
+        </div>
+        <br>
+        <p>Already have an account? </p><br><a href="main2">Login</a><br></br>
+        <a href="terms_conditions" target="_blank" style="font-size: small; text-align: center;">Terms and Conditions</a><input type="checkbox" name="checkbox" required>
+        <br>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+
+</div>
+
+</body>
+</html>
